@@ -19,31 +19,9 @@
   tailscale.enable = true;
   xrdp.enable = true;
   postgres.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    obsidian
-    git
-  ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Disable Auto-Suspend
-  systemd.targets.sleep.enable = false;
-  systemd.targets.suspend.enable = false;
-  systemd.targets.hibernate.enable = false;
-  systemd.targets.hybrid-sleep.enable = false;
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  openssh.enable = true;
+  gdm.enable = true;
+  systemd-boot.enable = true;
 
   # Required to set zsh as user shell
   programs.zsh.enable = true;
@@ -52,5 +30,8 @@
     initialPassword = "password";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN2MAboR5VJ4U3rrRz9UjQq4I8YDUd6doqbBLg2LGu5S ryanbruno506@gmail.com"
+    ];
   };
 }

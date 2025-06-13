@@ -8,5 +8,8 @@
     ./tailscale.nix
     ./xrdp.nix
     ./postgres.nix
+    ./openssh.nix
+    ./gdm.nix
+    ./systemd-boot.nix
   ];
 }
