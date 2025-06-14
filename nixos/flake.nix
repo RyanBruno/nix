@@ -27,7 +27,7 @@
         inputs.disko.nixosModules.default
         (import ./disko.nix { device = "/dev/sda"; })
 
-	./nixosModules
+        ./nixosModules
         ./hosts/ishtar/configuration.nix
               
         inputs.impermanence.nixosModules.impermanence

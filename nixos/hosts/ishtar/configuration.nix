@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
   ];
+  programs.nix-ld.enable = true;
 
   networking.hostName = "ishtar";
 
@@ -17,7 +18,7 @@
   nvidia.enable = true;
   home-manager.enable = true;
   tailscale.enable = true;
-  xrdp.enable = true;
+  xrdp.enable = false;
   postgres.enable = true;
   openssh.enable = true;
   gdm.enable = true;

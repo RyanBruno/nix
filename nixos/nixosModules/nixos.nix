@@ -22,5 +22,11 @@
     
     # Configure keymap in X11
     services.xserver.xkb.layout = "us";
+
+    nix.gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 1d";
+    };
   };
 }
