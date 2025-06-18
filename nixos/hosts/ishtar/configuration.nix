@@ -28,11 +28,12 @@
   programs.zsh.enable = true;
   users.users.ryan = {
     isNormalUser = true;
-    initialPassword = "password";
+    hashedPasswordFile = "/etc/passwd.d/ryan.hash";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN2MAboR5VJ4U3rrRz9UjQq4I8YDUd6doqbBLg2LGu5S ryanbruno506@gmail.com"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIGAFJPfIffDacoJ2OG5aaF5lR/OfTxc0gHvx6LJLAQj ryanbruno506@gmail.com"
     ];
   };
 }

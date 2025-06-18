@@ -9,7 +9,7 @@
     # Impermanent Wipe devie
     boot.initrd.postResumeCommands = lib.mkAfter ''
       mkdir /btrfs_tmp
-      mount /dev/root_vg/root /btrfs_tmp
+      mount /dev/mapper/crypted /btrfs_tmp
       if [[ -e /btrfs_tmp/root ]]; then
           mkdir -p /btrfs_tmp/old_roots
           timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/root)" "+%Y-%m-%-d_%H:%M:%S")
@@ -36,14 +36,21 @@
     environment.persistence."/persist/system" = {
       hideMounts = true;
       directories = [
-        "/etc/nixos"
-        "/var/log"
-        "/var/lib/nixos"
-        "/var/lib/systemd/coredump"
+        # Home
         "/home/ryan/src"
         "/home/ryan/.ssh"
-        #"/tmp/nextcloud"
+
+        # Logs
+        "/var/log"
+        "/var/lib/systemd/coredump"
+
+        # Nixos (User maps, group maps...)
+        "/var/lib/nixos"
+
+        # Keys
+        "/etc/passwd.d"
         "/var/lib/tailscale"
+        "/etc/ssh/host_keys"
       ];
       files = [
         "/etc/machine-id"
