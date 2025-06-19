@@ -19,7 +19,7 @@
   home-manager.enable = true;
   tailscale.enable = true;
   xrdp.enable = false;
-  postgres.enable = true;
+  postgres.enable = false;
   openssh.enable = true;
   gdm.enable = true;
   systemd-boot.enable = true;
@@ -34,7 +34,7 @@
   programs.zsh.enable = true;
   users.users.ryan = {
     isNormalUser = true;
-    hashedPasswordFile = "/etc/passwd.d/ryan.hash";
+    hashedPasswordFile = "/persist/system/etc/passwd.d/ryan.hash";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
