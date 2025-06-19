@@ -24,6 +24,12 @@
   gdm.enable = true;
   systemd-boot.enable = true;
 
+  # Disable Auto-Suspend
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
+
   # Required to set zsh as user shell
   programs.zsh.enable = true;
   users.users.ryan = {
