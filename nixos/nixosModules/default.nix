@@ -1,6 +1,7 @@
 
 { pkgs, lib, ... }: {
   imports = [
+    ./elk.nix
     ./impermanence.nix
     ./nixos.nix
     ./nvidia.nix

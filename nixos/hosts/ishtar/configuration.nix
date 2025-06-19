@@ -23,6 +23,7 @@
   openssh.enable = true;
   gdm.enable = true;
   systemd-boot.enable = true;
+  elk.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;
