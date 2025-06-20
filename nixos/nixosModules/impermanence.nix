@@ -40,6 +40,9 @@
         "/home/ryan/src"
         "/home/ryan/.ssh"
 
+        # Docker
+        "/var/lib/docker"
+
         # Logs
         "/var/log"
         "/var/lib/systemd/coredump"
