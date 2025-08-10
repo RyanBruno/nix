@@ -12,5 +12,6 @@
     ./openssh.nix
     ./gdm.nix
     ./systemd-boot.nix
+    ./homeassistant.nix
   ];
 }

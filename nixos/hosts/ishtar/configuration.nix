@@ -23,7 +23,8 @@
   openssh.enable = true;
   gdm.enable = true;
   systemd-boot.enable = true;
-  elk.enable = true;
+  elk.enable = false;
+  home-assistant.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;
