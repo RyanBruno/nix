@@ -50,6 +50,9 @@
         # Nixos (User maps, group maps...)
         "/var/lib/nixos"
 
+        # ipfs
+        "/var/lib/ipfs"
+
         # Keys
         "/etc/passwd.d"
         "/var/lib/tailscale"

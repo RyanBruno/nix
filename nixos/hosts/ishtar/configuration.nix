@@ -25,6 +25,7 @@
   systemd-boot.enable = true;
   elk.enable = false;
   home-assistant.enable = true;
+  ipfs.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;

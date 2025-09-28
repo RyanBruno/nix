@@ -13,5 +13,6 @@
     ./gdm.nix
     ./systemd-boot.nix
     ./homeassistant.nix
+    ./ipfs.nix
   ];
 }
