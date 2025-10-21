@@ -9,7 +9,7 @@
     services.kubo = {
       enable = true;
       settings.Addresses.API = [
-        "/ip4/127.0.0.1/tcp/5001"
+        "/ip4/100.75.150.62/tcp/5001"
       ];
       settings = {
         "API" = {

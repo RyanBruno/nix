@@ -51,7 +51,13 @@
             {
                 "Home Assistant" = {
                 description = "IoT Automation";
-                href = "https://ishtar.tail3be192.ts.net/homeassistant/";
+                href = "http://ishtar.tail3be192.ts.net:8123";
+                };
+            }
+            {
+                "IPFS" = {
+                description = "IPFS frontend";
+                href = "http://ishtar.tail3be192.ts.net:5001/webui";
                 };
             }
             {
@@ -126,6 +132,9 @@
                     };
                     "/homeassistant/" = {
                         proxyPass = "http://127.0.0.1:8123/";
+                    };
+                    "/ipfs/" = {
+                        proxyPass = "http://127.0.0.1:5001/webui";
                     };
                 };
             };
