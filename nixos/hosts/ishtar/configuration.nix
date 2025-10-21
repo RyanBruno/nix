@@ -26,6 +26,7 @@
   elk.enable = false;
   home-assistant.enable = true;
   ipfs.enable = true;
+  homepage.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;
@@ -38,7 +39,10 @@
   users.users.ryan = {
     isNormalUser = true;
     hashedPasswordFile = "/persist/system/etc/passwd.d/ryan.hash";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "ipfs"
+      "wheel"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN2MAboR5VJ4U3rrRz9UjQq4I8YDUd6doqbBLg2LGu5S ryanbruno506@gmail.com"

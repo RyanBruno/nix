@@ -14,5 +14,6 @@
     ./systemd-boot.nix
     ./homeassistant.nix
     ./ipfs.nix
+    ./homepage.nix
   ];
 }

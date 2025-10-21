@@ -10,6 +10,7 @@
     enable = true;
     userEmail = "ryanbruno506@gmail.com";
     userName = "Ryan Bruno";
+    lfs.enable = true;
   };
   programs.vim = {
     enable = true;
