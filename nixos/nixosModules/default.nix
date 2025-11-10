@@ -16,5 +16,6 @@
     ./ipfs.nix
     ./homepage.nix
     ./qemu.nix
+    ./dwm.nix
   ];
 }

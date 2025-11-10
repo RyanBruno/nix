@@ -21,12 +21,13 @@
   xrdp.enable = false;
   postgres.enable = false;
   openssh.enable = true;
-  gdm.enable = true;
+  gdm.enable = false;
   systemd-boot.enable = true;
   elk.enable = false;
   home-assistant.enable = true;
   ipfs.enable = false;
   homepage.enable = true;
+  dwm.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;
@@ -35,7 +36,7 @@
   systemd.targets.hybrid-sleep.enable = false;
 
   qemu = {
-    enable = true;
+    enable = false;
     isoPath = "/var/lib/qemu/latest-nixos-minimal-x86_64-linux.iso";
     autostart = true;
     enableVNC = true;
