@@ -25,7 +25,7 @@
   systemd-boot.enable = true;
   elk.enable = false;
   home-assistant.enable = true;
-  ipfs.enable = true;
+  ipfs.enable = false;
   homepage.enable = true;
 
   # Disable Auto-Suspend
@@ -33,6 +33,17 @@
   systemd.targets.suspend.enable = false;
   systemd.targets.hibernate.enable = false;
   systemd.targets.hybrid-sleep.enable = false;
+
+  qemu = {
+    enable = true;
+    isoPath = "/var/lib/qemu/latest-nixos-minimal-x86_64-linux.iso";
+    autostart = true;
+    enableVNC = true;
+    diskPath = "/var/lib/qemu/disk.qcow2";
+    # optional tweaks:
+    # cpu = 6;
+    # memory = "12G";
+  };
 
   # Required to set zsh as user shell
   programs.zsh.enable = true;
@@ -49,4 +60,8 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIGAFJPfIffDacoJ2OG5aaF5lR/OfTxc0gHvx6LJLAQj ryanbruno506@gmail.com"
     ];
   };
+
+  environment.systemPackages = [
+    pkgs.angle-grinder
+  ];
 }

@@ -39,6 +39,7 @@
         # Home
         "/home/ryan/src"
         "/home/ryan/.ssh"
+        "/home/ryan/.sfeed"
 
         # Docker
         "/var/lib/docker"
@@ -57,6 +58,9 @@
         "/etc/passwd.d"
         "/var/lib/tailscale"
         "/etc/ssh/host_keys"
+
+        # VMs
+        "/var/lib/qemu"
       ];
       files = [
         "/etc/machine-id"

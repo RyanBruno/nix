@@ -1,0 +1,18 @@
+journalctl --since today -o short-iso | agrind '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message'
+
+journalctl --since today -o short-iso | agrind '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message
+| count by Process'
+
+journalctl --since today -o short-iso | agrind --output format='{Date} => {Message}' '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message
+| where Process == "tailscaled"'
+
+
+journalctl --since today -o short-iso | agrind --output format='{Date} => {Message}' '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message
+| where Process == "sshd-session"'
+
+
+journalctl --since today -o short-iso | agrind --output format='{Date} => {Message}' '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message
+| where Process == "docker-homeassistant-start"'
+2025-10-27T13:03:36-04:00
+
+journalctl --since today -o short-iso | agrind --output format='{Date} => {Message}' '* | parse "* * *[*]: *" as Date,Hostname,Process,PID,Message

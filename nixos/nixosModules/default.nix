@@ -15,5 +15,6 @@
     ./homeassistant.nix
     ./ipfs.nix
     ./homepage.nix
+    ./qemu.nix
   ];
 }

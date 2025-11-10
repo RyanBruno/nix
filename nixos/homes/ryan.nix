@@ -2,15 +2,20 @@
 
 {
   home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.packages = with pkgs; [
+    sfeed
+  ];
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
 
   programs.git = {
     enable = true;
-    userEmail = "ryanbruno506@gmail.com";
-    userName = "Ryan Bruno";
     lfs.enable = true;
+    settings.user = {
+        email = "ryanbruno506@gmail.com";
+        name = "Ryan Bruno";
+    };
   };
   programs.vim = {
     enable = true;

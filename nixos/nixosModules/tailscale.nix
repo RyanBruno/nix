@@ -2,7 +2,7 @@
 
   options = {
     tailscale.enable = 
-      lib.mkEnableOption "enables nvidia drivers";
+      lib.mkEnableOption "enables tailscale";
   };
 
   config = lib.mkIf config.tailscale.enable {

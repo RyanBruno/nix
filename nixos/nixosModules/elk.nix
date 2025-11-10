@@ -11,7 +11,7 @@ in {
     # Optional: Open ports
     networking.firewall.allowedTCPPorts = [
       5601  # Kibana
-      #9200  # Elasticsearch
+      # 9200  # Elasticsearch
       5044  # Logstash (e.g. beats input)
     ];
 
