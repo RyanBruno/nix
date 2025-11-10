@@ -4,6 +4,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
     sfeed
+    neofetch
   ];
 
   # Allow Unfree
@@ -29,4 +30,13 @@
       vscodevim.vim
     ];
   };
+
+  programs.htop.enable = true;
+  programs.zsh = {
+    enable = true;
+
+    # Enable command completion
+    enableCompletion = true;
+  };
 }
+

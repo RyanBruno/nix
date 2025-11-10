@@ -34,5 +34,18 @@
         inputs.home-manager.nixosModules.default
       ];
     };
+    nixosConfigurations.thorax = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        inputs.disko.nixosModules.default
+        (import ./disko.nix { device = "/dev/sda"; })
+
+        ./nixosModules
+        ./hosts/thorax/configuration.nix
+              
+        inputs.impermanence.nixosModules.impermanence
+        inputs.home-manager.nixosModules.default
+      ];
+    };
   };
 }
