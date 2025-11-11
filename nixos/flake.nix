@@ -25,7 +25,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         inputs.disko.nixosModules.default
-        (import ./disko.nix { device = "/dev/sda"; })
+        (import ./hosts/ishtar/disko.nix { device = "/dev/sda"; })
 
         ./nixosModules
         ./hosts/ishtar/configuration.nix
