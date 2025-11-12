@@ -17,7 +17,7 @@
                 content = {
                   type = "filesystem";
                   format = "ext4";
-                  mountpoint = "/mnt/ssd";
+                  mountpoint = "/ssd";
                 };
               };
             };

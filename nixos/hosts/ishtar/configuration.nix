@@ -28,6 +28,7 @@
   ipfs.enable = false;
   homepage.enable = true;
   dwm.enable = true;
+  sshfs.enable = true;
 
   # Disable Auto-Suspend
   systemd.targets.sleep.enable = false;

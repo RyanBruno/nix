@@ -17,5 +17,6 @@
     ./homepage.nix
     ./qemu.nix
     ./dwm.nix
+    ./sshfs.nix
   ];
 }
